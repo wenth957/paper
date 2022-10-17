@@ -1,0 +1,97 @@
+{
+    "code-runner.runInTerminal": true, // 设置成false会在“输出”中输出，无法输入
+    "code-runner.saveFileBeforeRun": true, // run code前保存
+    "code-runner.preserveFocus": false, // 若为false，run code后光标会聚焦到终端上。如果需要频繁输入数据可设为false
+    "code-runner.ignoreSelection": true, // 默认为false，效果是鼠标选中一块代码后可以单独执行
+    "code-runner.clearPreviousOutput": true, // 每次run code前清空属于code runner的终端消息，默认false
+    "editor.cursorSmoothCaretAnimation": true, // 移动光标时变得平滑
+    "editor.smoothScrolling": true, // 滚动平滑，不过效果很微弱
+    "files.trimTrailingWhitespace": true, // 保存时，删除每一行末尾的空格
+    "files.insertFinalNewline": true, // 保存后文件最末尾加一整行空行，Linux下的习惯
+    "git.ignoreLegacyWarning": true,
+    "workbench.iconTheme": "vscode-icons", //启用vscode图标
+    "python.pythonPath": "D:\\code\\anaconda\\python.exe", // python3路径
+    "editor.lineHeight": 25, // 编辑器中的行高
+    "editor.fontSize": 16, // 编辑器中的字体
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": true, //编辑器自动保存
+    "python.linting.flake8Enabled": true,
+    "path-intellisense.autoSlashAfterDirectory": true,
+    "path-intellisense.extensionOnImport": true,
+    "workbench.colorTheme": "One Dark Pro Darker", // 配色方案
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django",
+        "--disable-msg=C0111"
+    ], // 忽略的警告信息
+    // 下面是topper的插入header配置
+    "topper.customTemplateParameters": [
+        {
+            "personalProfile": {
+                "author": "ML_get",
+                "copyright": "None",
+                "license": "None",
+            }
+        }
+    ],
+    "topper.headerTemplates": [
+        {
+            "defaultCStyled": {
+                "headerBegin": "/**",
+                "headerPrefix": "*",
+                "headerEnd": "*/",
+                "template": [
+                    "${headerBegin}",
+                    "${headerPrefix} ${fileName}",
+                    "${headerPrefix} @author ${author}",
+                    "${headerPrefix} @created ${createdDate}",
+                    "${headerPrefix} @copyright ${copyright}",
+                    "${headerPrefix} @last-modified ${lastModifiedDate}",
+                    "${headerEnd}"
+                ]
+            }
+        },
+        {
+            "python": {
+                "headerBegin": "# -*- Coding: UTF-8 -*-",
+                "headerPrefix": "#",
+                "headerEnd": "#",
+                "template": [
+                    "${headerBegin}",
+                    "${headerPrefix} ${fileName}",
+                    "${headerPrefix} @作者 ${author} ML",
+                    "${headerPrefix} @创建日期 ${createdDate}",
+                    "${headerPrefix} @最后修改日期 ${lastModifiedDate}",
+                    "${headerEnd}"
+                ]
+            }
+        }
+    ],
+    "editor.fontFamily": "monospace",
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontWeight": "600",
+    "python.testing.pytestArgs": [
+        "100_days"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": false,
+    "python.languageServer": "Jedi",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.promptToConfigure": false,
+    // autopep8
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Args": [
+        "--max-line-length=200",
+        "--ignore",
+        "E402"
+    ],
+    "jupyter.jupyterServerType": "local",
+    "editor.guides.indentation": false,
+    "python.linting.enabled": true,
+}

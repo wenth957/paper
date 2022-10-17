@@ -1,0 +1,65 @@
+{
+    // 使用 IntelliSense 了解相关属性。
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    // 指定编程语言，指定调试类型（两种），是否要打开浏览器（远程web服务 配置ip 端口）
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python3",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "python": "D:\\code\\anaconda\\envs\\venv_torch\\python.exe", //python3的安装路径
+            "program": "${file}",
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "envFile": "${workspaceFolder}/.env",
+        },
+        { //本地调试
+            "name": "Python: Terminal (integrated)",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "python": "D:\\code\\anaconda\\envs\\venv_torch\\python.exe",
+            "program": "${file}",
+            "cwd": "",
+            "console": "integratedTerminal",
+            "env": {},
+            "envFile": "${workspaceFolder}/.env",
+        },
+        {
+            // 配置名称，将会在启动配置的下拉菜单中显示，远程调制
+            "name": "Python: Terminal (external)",
+            // 配置类型，这里只能为python
+            "type": "python",
+            // 调试类型，可以为launch（启动）或attach（附加）
+            "request": "launch",
+            // 设为true时程序将暂停在程序入口处，一般设置为false
+            "stopOnEntry": false,
+            "python": "D:\\code\\anaconda\\envs\\venv_torch\\python.exe",
+            // 将要进行调试的程序的路径
+            "program": "${file}",
+            // 调试程序时的工作目录，一般为${workspaceRoot}即代码所在目录
+            "cwd": "",
+            //调试时显示控制台
+            "console": "externalTerminal",
+            "env": {},
+            "envFile": "${workspaceFolder}/.env",
+        },
+        {
+            "name": "Python: Django",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "python": "D:\\code\\anaconda\\envs\\venv_torch\\python.exe",
+            "program": "${workspaceFolder}/manage.py",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "runserver",
+                "--noreload",
+                "--nothreading"
+            ]
+        }
+    ]
+}
